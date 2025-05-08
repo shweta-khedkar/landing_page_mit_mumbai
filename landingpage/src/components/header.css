@@ -1,0 +1,241 @@
+.header-container {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-image {
+  max-width: 240px;   /* Larger default for desktop */
+  min-width: 100px;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.05);
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f3f4f6;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background-color: #e5e7eb;
+  transform: translateY(-2px);
+}
+
+.social-icon {
+  font-size: 1.25rem;
+  color: #4b5563;
+  transition: color 0.3s ease;
+  list-style: none;
+}
+
+.social-link:hover .social-icon {
+  color: #2563eb;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .logo-image {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 900px) {
+  .logo-image {
+    max-width: 160px;
+  }
+}
+
+@media (max-width: 640px) {
+  .logo-image {
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 500px) {
+  .logo-image {
+    max-width: 90px;
+  }
+}
+
+.header-container {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+  }
+  
+  .logo-section {
+    display: flex;
+   
+  }
+  
+  .social-icons ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+  }
+  
+  /* ...rest of your styles... */
+
+.header-container {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.admission-btn-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.admission-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #2563eb 0%, #1e40af 100%);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.15);
+  transition: background 0.3s, transform 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.admission-btn:hover {
+  background: linear-gradient(90deg, #1e40af 0%, #2563eb 100%);
+  transform: scale(1.05);
+}
+
+.social-icons ul {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  .header-content {
+    padding: 0.5rem 0.5rem;
+  }
+  .admission-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .header-content {
+    flex-direction: row;
+    gap: 0.2rem;
+    align-items: center;
+    padding: 0.3rem 0.2rem;
+  }
+  .logo-section {
+    flex: 0 0 auto;
+  }
+  .admission-btn-section {
+    flex: 1 1 auto;
+    justify-content: center;
+    margin: 0;
+  }
+  .admission-btn {
+    width: auto;
+    min-width: 0;
+    padding: 0.3rem 0.7rem;
+    font-size: 0.85rem;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .social-icons {
+    flex: 0 0 auto;
+  }
+  .logo-image {
+    height: 2rem;
+  }
+  .social-link {
+    width: 28px;
+    height: 28px;
+  }
+  .social-icon {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.2rem;
+  }
+  .logo-section, .admission-btn-section, .social-icons {
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+  .admission-btn {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 0.4rem 0.5rem;
+    font-size: 0.9rem;
+  }
+  .social-icons ul {
+    justify-content: center;
+    gap: 0.7rem;
+  }
+}
