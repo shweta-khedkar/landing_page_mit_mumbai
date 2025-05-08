@@ -1,0 +1,38 @@
+.mit-footer {
+    background: linear-gradient(135deg, #e9eff2, #c4e9f5, #a1d6ed);
+    color: #050505;
+  }
+.blacktxt{
+    color: black;
+ } 
+  .social-icon {
+    font-size: 1.5rem;
+    color: #0b0b0b;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: #ff6a00;
+  }
+  
+  .enquire-now-btn {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background: #ff6a00;
+    color: rgb(6, 6, 6);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    z-index: 1000;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .enquire-now-btn:hover {
+    background: #ee0979;
+    transform: translateY(-2px);
+  }
+  
