@@ -17,7 +17,7 @@ const Header = () => {
             </a>
           </div>
           <div className="admission-btn-section">
-            <a href="https://www.mitmumbai.com/" className="admission-btn">
+            <a href="/" className="admission-btn">
               Admissions Open for 2025-26
             </a>
           </div>
