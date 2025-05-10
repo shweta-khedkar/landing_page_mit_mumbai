@@ -10,22 +10,28 @@ import Footer from "./components/Footer";
 function App() {
   const [showModal, setShowModal] = useState(true);
 
+  // ✅ Add the missing function to open the modal
+  const handleOpenModal = () => {
+    setShowModal(true);
+  };
+
   const handleCloseModal = () => {
     setShowModal(false);
   };
 
   return (
     <>
-      <Header />
+      <Header onEnquireClick={handleOpenModal} />
       <div className="main-content">
         <VideoBackground isBlurred={showModal} isModalOpen={showModal} />
+
         {showModal && <ModalApplyNow onClose={handleCloseModal} />}
+
         {!showModal && (
           <>
             <ProgramsSection />
             <Rank />
-            <Whymit />
-            {/* 👈 Add ranking below programs */}
+            <Whymit onEnquireClick={handleOpenModal} />
             <Footer />
           </>
         )}

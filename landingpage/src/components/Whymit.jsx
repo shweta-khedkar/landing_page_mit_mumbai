@@ -1,6 +1,6 @@
 import React from "react";
 import "./whymit.css"; // Import your CSS file for styling
-const Whymit = () => {
+const Whymit = ({ onEnquireClick }) => {
   const points = [
     "PhD faculty predominantly hold degrees from top-tier institutes such as IITs & NITs.",
     "Rural & National immersion programs",
@@ -32,10 +32,7 @@ const Whymit = () => {
         </div>
       </div>
       {/* <button className="enquire-now-btn">Enquire Now</button> */}
-      <button
-        className="enquire-now-btn"
-        onClick={() => (window.location.href = "https://www.mitmumbai.com/")}
-      >
+      <button className="enquire-now-btn" onClick={onEnquireClick}>
         Enquire Now
       </button>
     </section>
