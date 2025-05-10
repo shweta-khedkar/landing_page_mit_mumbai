@@ -1,133 +1,80 @@
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(17, 16, 16, 0.5); /* dark shadow background */
-  backdrop-filter: blur(5px); /* adds background blur */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: fadeIn 0.5s ease-in-out;
-  z-index: 1000;
+/* Blur background content while modal open */
+.blurred {
+  filter: blur(6px);
+  pointer-events: none;
+  user-select: none;
+  transition: filter 0.3s ease-in-out;
 }
 
+/* Modal colors & customization */
 .modal-content {
-  border-radius: 16px;
-  width: 90%;
-  max-width: 600px;
-  padding: 30px;
-  position: relative;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-  transform: scale(0.95);
-  animation: zoomIn 0.4s ease forwards;
-  background-color: #1a1a1a; /* optional: background for the modal */
+  background: linear-gradient(135deg, #2a2f35, #3f0b93);
+  color: #fff;
+  padding: 20px;
 }
 
+.modal-title {
+  font-weight: 600;
   
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+}
+
+.form-label {
+  color: #fff;
+}
+
+.form-control,
+.form-select,
+textarea {
+  border-radius: 8px;
+  border: none;
+}
+
+textarea {
+  resize: none;
+}
+
+.btn-primary {
+  background-color: #de481b;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #e64a19;
+}
+.blurred {
+  filter: blur(5px);
+  transition: 0.3s ease;
+}
+/* Modal fade-in animation */
+.modal.fade.show {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
- 
-  label {
-    font-size: 1.2rem;
-    color: #333;
-    margin-bottom: 10px;
-    display: block;
-    color: white;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  .modal-content {
-   
-    border-radius: 16px;
-    width: 90%;
-    height: fit-content;
-    margin-top: 10rem;
-    display: flex;
-    justify-content: center;
-    max-width: 600px;
-    padding: 30px 30px;
-    position: relative;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-    transform: scale(0.95);
-    animation: zoomIn 0.4s ease forwards;
-    z-index: 2;
-  }
-  
-  @keyframes zoomIn {
-    from {
-      opacity: 0;
-      transform: scale(0.9);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-  
-  .modal-close {
-    position: absolute;
-    top: 18px;
-    right: 24px;
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #f6f3f3;
-    background-color: #2a69f0;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  .modal-close:hover {
-    color: #000;
-  }
-  
-  /* Optional: Style the form nicely */
-  .apply-form h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: white;
-  }
-  
-  .apply-form .form-label {
-    font-weight: 500;
-    margin-bottom: 5px;
-  }
-  
-  .apply-form .form-control {
-    width: 100%;
-    padding: 10px 14px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-  }
-  
-  .btn-apply {
-    width: 100%;
-    background-color: #007bff;
-    color: white;
-    padding: 12px 0;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn-apply:hover {
-    background-color: #0056b3;
-  }
-  
-  .apply-image img {
-    width: 100%;
-    border-radius: 12px;
-    margin-top: 20px;
-  }
+}
+
+/* Custom backdrop to dim screen */
+.modal-backdrop.show {
+  opacity: 0.7;
+  background-color: #000;
+}
+
+/* Add border-radius and shadow for modal content */
+.modal-content {
+  border-radius: 1rem;
+}
+
+/* Optional: Smooth transition for closing modal */
+body {
+  transition: all 0.3s ease;
+}
+
+
