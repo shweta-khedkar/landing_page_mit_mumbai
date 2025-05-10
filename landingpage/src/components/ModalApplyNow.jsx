@@ -76,7 +76,7 @@ const ModalApplyNow = ({ onClose }) => {
         <div className="modal-content p-4">
           <div className="modal-header">
             <h5 className="modal-title" id="applyNowModalLabel">
-              Apply Now
+              Apply Now / Enquire Now
             </h5>
             <button
               type="button"
